@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<!-- This file is part of Tryton.  The COPYRIGHT file at the top level of
+this repository contains the full copyright notices and license terms. -->
+<tree>
+  <!-- new fields -->
+    <field name="document_origin" expand="1"/>
+    <field name="document"/>
+    <field name="document_origin_date"/>
+    <field name="document_origin_planned_date"/>
+    <field name="document_origin_party"/>
+  <!-- common -->
+    <field name="product"/>
+    <field name="quantity"/>
+    <field name="uom"/>
+    <field name="unit_price"/>
+    <field name="cost_price"/>
+    <field name="state"/>
+    <field name="origin_state"/>
+    <field name="effective_date"/>
+  <!-- out -->
+  <field name="to_warehouse"/>
+  <!-- <field name="production_input"/> -->
+  <!-- in -->
+  <field name="from_warehouse"/>
+  <!-- <field name="production_output"/> -->
+</tree>
