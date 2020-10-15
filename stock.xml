@@ -142,7 +142,7 @@ this repository contains the full copyright notices and license terms. -->
     </data>
     <data depends="stock_lot">
       <!-- sale -->
-        <record model="ir.ui.view" id="move_in_stock_lot_view_tree">
+        <record model="ir.ui.view" id="move_out_stock_lot_view_tree">
             <field name="model">stock.move</field>
             <field name="inherit" ref="move_out_view_tree"/>
             <field name="name">move_stock_lot_tree</field>
