@@ -13,7 +13,7 @@ class Move(metaclass=PoolMeta):
     document = fields.Function(fields.Reference('Document',
                     selection='get_document'), 'get_relation')
     document_origin_date = fields.Function(fields.Date(
-        'Doccument Origin Date'), 'get_relation',)
+        'Document Origin Date'), 'get_relation',)
     document_origin_planned_date = fields.Function(fields.Date(
         'Document Origin Planned Date'), 'get_relation',
         searcher='search_document_origin_planned_date')
