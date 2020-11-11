@@ -20,14 +20,14 @@ this repository contains the full copyright notices and license terms. -->
                 pyson="1"/>
         </record>
         <record model="ir.action.act_window.domain" id="act_move_out_form_domain_pending_overdue">
-            <field name="name">Overdue pending incoming</field>
+            <field name="name">Overdue pending out</field>
             <field name="sequence" eval="40"/>
             <field name="domain" eval="[('state', 'in', ['draft', 'staging', 'assigned']),('planned_date', '&lt;', DateTime(hour=0, minute=0,second=0, microsecond=0))]" pyson="1"/>
             <field name="count" eval="True"/>
             <field name="act_window" ref="act_move_out_form"/>
         </record>
         <record model="ir.action.act_window.domain" id="act_move_out_form_domain_pending">
-            <field name="name">Pending incoming</field>
+            <field name="name">Pending out</field>
             <field name="sequence" eval="40"/>
             <field name="domain" eval="[('state', 'in', ['draft', 'staging', 'assigned'])]" pyson="1"/>
             <field name="count" eval="True"/>
@@ -36,7 +36,7 @@ this repository contains the full copyright notices and license terms. -->
         <record model="ir.action.act_window.domain" id="act_move_out_form_domain_all">
             <field name="name">All</field>
             <field name="sequence" eval="9999"/>
-            <field name="domain"></field>
+            <field name="domain" eval=""></field>
             <field name="act_window" ref="act_move_out_form"/>
         </record>
         <record model="ir.action.act_window.view" id="act_move_out_form_view1">
@@ -145,13 +145,13 @@ this repository contains the full copyright notices and license terms. -->
         <record model="ir.ui.view" id="move_out_stock_lot_view_tree">
             <field name="model">stock.move</field>
             <field name="inherit" ref="move_out_view_tree"/>
-            <field name="name">move_stock_lot_tree</field>
+            <field name="name">move_in_stock_lot_tree</field>
         </record>
         <!-- purchase -->
         <record model="ir.ui.view" id="move_in_stock_lot_view_tree">
           <field name="model">stock.move</field>
           <field name="inherit" ref="move_in_view_tree"/>
-          <field name="name">move_stock_lot_tree</field>
+          <field name="name">move_out_stock_lot_tree</field>
         </record>
     </data>
     <data depends="stock_valued">
