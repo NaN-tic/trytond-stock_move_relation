@@ -145,13 +145,13 @@ this repository contains the full copyright notices and license terms. -->
         <record model="ir.ui.view" id="move_out_stock_lot_view_tree_2">
             <field name="model">stock.move</field>
             <field name="inherit" ref="move_out_view_tree"/>
-            <field name="name">move_in_stock_lot_tree</field>
+            <field name="name">move_out_stock_lot_tree</field>
         </record>
         <!-- purchase -->
         <record model="ir.ui.view" id="move_in_stock_lot_view_tree">
           <field name="model">stock.move</field>
           <field name="inherit" ref="move_in_view_tree"/>
-          <field name="name">move_out_stock_lot_tree</field>
+          <field name="name">move_in_stock_lot_tree</field>
         </record>
     </data>
     <data depends="stock_valued">
