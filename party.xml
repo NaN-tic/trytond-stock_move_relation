@@ -11,14 +11,14 @@ this repository contains the full copyright notices and license terms. -->
             <field name="domain" eval="[If(Eval('active_ids', []) == [Eval('active_id')], ('document_origin_party', '=', Eval('active_id')), ('document_origin_party', 'in', Eval('active_ids'))), ['OR', ('to_location.type', 'in', ['customer', 'production', 'supplier']), ('from_location.type', 'in',['storage', 'view'])]]" pyson="1"/>
         </record>
         <record model="ir.action.act_window.domain" id="act_party_move_out_form_domain_pending_overdue">
-            <field name="name">Overdue pending incoming</field>
+            <field name="name">Overdue pending out</field>
             <field name="sequence" eval="40"/>
             <field name="domain" eval="[('state', 'in', ['draft', 'staging', 'assigned']), ('planned_date', '&lt;', DateTime(hour=0, minute=0,second=0, microsecond=0))]" pyson="1"/>
             <field name="count" eval="True"/>
             <field name="act_window" ref="act_party_move_out_form2"/>
         </record>
         <record model="ir.action.act_window.domain" id="act_party_move_out_form_domain_pending">
-            <field name="name">Pending incoming</field>
+            <field name="name">Pending out</field>
             <field name="sequence" eval="40"/>
             <field name="domain" eval="[('state', 'in', ['draft', 'staging', 'assigned'])]" pyson="1"/>
             <field name="count" eval="True"/>
