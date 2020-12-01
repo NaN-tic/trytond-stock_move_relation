@@ -168,4 +168,16 @@ this repository contains the full copyright notices and license terms. -->
             <field name="name">move_stock_valued_tree</field>
         </record>
     </data>
+    <data depends="production">
+        <record model="ir.ui.view" id="move_out_production_view_tree">
+            <field name="model">stock.move</field>
+            <field name="inherit" ref="move_out_view_tree"/>
+            <field name="name">move_out_production_tree</field>
+        </record>
+        <record model="ir.ui.view" id="move_in_production_view_tree">
+            <field name="model">stock.move</field>
+            <field name="inherit" ref="move_in_view_tree"/>
+            <field name="name">move_in_production_tree</field>
+        </record>
+    </data>
 </tryton>
