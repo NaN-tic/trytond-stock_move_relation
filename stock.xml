@@ -14,7 +14,7 @@ this repository contains the full copyright notices and license terms. -->
         <record model="ir.action.act_window" id="act_move_out_form">
             <field name="name">Moves Out</field>
             <field name="res_model">stock.move</field>
-            <field name="domain" eval="['OR', ('to_location.type', 'in', ['customer', 'production', 'supplier']), ('from_location.type', 'in', ['storage', 'view'])]" pyson="1"/>
+            <field name="domain" eval="[('to_location.type', 'in', ['customer', 'production', 'supplier']), ('from_location.type', 'in', ['storage', 'view'])]" pyson="1"/>
             <field name="search_value"
                 eval=""
                 pyson="1"/>
@@ -78,7 +78,7 @@ this repository contains the full copyright notices and license terms. -->
         <record model="ir.action.act_window" id="act_move_in_form">
             <field name="name">Moves In</field>
             <field name="res_model">stock.move</field>
-            <field name="domain" eval="['OR', ('to_location.type', 'in', ['storage', 'view']), ('from_location.type', 'in', ['supplier', 'production', 'customer'])]" pyson="1"/>
+            <field name="domain" eval="[('to_location.type', 'in', ['storage', 'view']), ('from_location.type', 'in', ['supplier', 'production', 'customer'])]" pyson="1"/>
             <field name="search_value"
                 eval=""
                 pyson="1"/>
