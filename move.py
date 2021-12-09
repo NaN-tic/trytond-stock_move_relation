@@ -69,7 +69,7 @@ class Move(metaclass=PoolMeta):
         res = {n: {m.id: None for m in moves} for n in names}
         for move in moves:
             document_origin = None
-            if move.origin:
+            if move.origin and not isinstance(move.origin, str):
                 if (move.origin.__name__ == 'sale.line'
                         and move.origin.sale):
                     document_origin = move.origin.sale
@@ -88,19 +88,21 @@ class Move(metaclass=PoolMeta):
 
             if 'document' in names:
                 if move.shipment:
-                    res['document'][move.id] = '%s,%s' % (move.shipment.__name__,
-                        move.shipment.id)
+                    res['document'][move.id] = str(move.shipment)
                 if getattr(move, 'production_input', None):
                     res['document'][move.id] = str(move.production_input)
                 if getattr(move, 'production_output', None):
                     res['document'][move.id] = str(move.production_output)
 
-            if 'document_origin_date' in names and document_origin:
-                res['document_origin_date'][move.id] = (document_origin.sale_date
+            if ('document_origin_date' in names and document_origin
+                    and not isinstance(document_origin, str)):
+                res['document_origin_date'][move.id] = (
+                    document_origin.sale_date
                     if document_origin.__name__ == 'sale.sale'
                     else document_origin.purchase_date)
 
-            if 'document_origin_planned_date' in names and move.origin:
+            if ('document_origin_planned_date' in names and move.origin
+                    and not isinstance(move.origin, str)):
                 if move.origin.__name__ == 'sale.line':
                     delivery_date = getattr(move.origin,
                         'manual_delivery_date', None)
