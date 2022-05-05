@@ -2,6 +2,7 @@
 # copyright notices and license terms.
 from trytond.model import fields
 from trytond.pool import Pool, PoolMeta
+from trytond.pyson import Eval
 
 __all__ = ['Move']
 
@@ -24,7 +25,10 @@ class Move(metaclass=PoolMeta):
         'To Warehouse', domain=[('type', '=', 'warehouse')]),
         'get_relation', searcher='search_to_warehouse')
     document_origin_party = fields.Function(
-        fields.Many2One('party.party', 'Party'), 'get_relation',
+        fields.Many2One('party.party', 'Party', context={
+            'company': Eval('company'),
+            },
+        depends=['company']), 'get_relation',
         searcher='search_document_origin_party')
 
     @classmethod
