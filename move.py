@@ -26,7 +26,7 @@ class Move(metaclass=PoolMeta):
         'get_relation', searcher='search_to_warehouse')
     document_origin_party = fields.Function(
         fields.Many2One('party.party', 'Party', context={
-            'company': Eval('company'),
+            'company': Eval('company', -1),
             },
         depends=['company']), 'get_relation',
         searcher='search_document_origin_party')
