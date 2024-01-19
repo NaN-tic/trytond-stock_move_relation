@@ -1,5 +1,9 @@
 # The COPYRIGHT file at the top level of this repository contains the full
 # copyright notices and license terms.
+from sql.functions import Substring, Position
+from sql.conditionals import Coalesce
+from sql import Cast, Literal
+
 from trytond.model import fields
 from trytond.pool import Pool, PoolMeta
 from trytond.pyson import Eval
@@ -167,8 +171,8 @@ class Move(metaclass=PoolMeta):
         Line = Pool().get('sale.line')
 
         domain = ['OR',
-                    ('planned_date',) + tuple(clause[1:]),
-                    ('origin.manual_delivery_date', '=', None, 'sale.line'),
+                    [('origin', '!=', None),
+                        ('planned_date',) + tuple(clause[1:])],
                     ('purchase.delivery_date',) + tuple(clause[1:]),
                     ('origin.delivery_date_store',) + tuple(clause[1:3])
                         + ('purchase.line',) + tuple(clause[3:])
@@ -177,3 +181,60 @@ class Move(metaclass=PoolMeta):
         if hasattr(Line, 'manual_delivery_date'):
             domain.append(('origin.manual_delivery_date',) + tuple(clause[1:3])
                     + ('sale.line',) + tuple(clause[3:]),)
+        return domain
+
+    @classmethod
+    def _document_origin_planned_date_query(cls):
+        pool = Pool()
+        Move = pool.get('stock.move')
+        PurchaseLine = pool.get('purchase.line')
+        Purchase = pool.get('purchase.purchase')
+        SaleLine = pool.get('sale.line')
+        Sale = pool.get('sale.sale')
+
+        move = Move.__table__()
+        purchase_line = PurchaseLine.__table__()
+        purchase = Purchase.__table__()
+        sale_line = SaleLine.__table__()
+        sale = Sale.__table__()
+
+        return move.join(purchase_line, 'LEFT', condition=(
+            (Cast(Substring(move.origin,
+                Position(',', move.origin) + Literal(1)),
+                cls.id.sql_type().base) == purchase_line.id)
+                & move.origin.ilike('purchase.line,%'))).join(
+                purchase, 'LEFT', condition=(
+                    purchase_line.purchase == purchase.id)
+            ).join(sale_line, 'LEFT', condition=(
+                (Cast(Substring(
+                    move.origin, Position(',', move.origin) + Literal(1)),
+                cls.id.sql_type().base) == sale_line.id)
+                & move.origin.ilike('sale.line,%'))).join(
+                    sale, 'LEFT', condition=(sale_line.sale == sale.id)
+                ).select(move.id.as_('move'),
+                    purchase_line.delivery_date_store.as_(
+                        'delivery_date_store'),
+                    purchase.delivery_date.as_('delivery_date'),
+                    sale.shipping_date.as_('shipping_date'),
+                    move.planned_date.as_('planned_date'),
+                    where=(move.origin != None))
+
+    @classmethod
+    def order_document_origin_planned_date(cls, tables):
+        table, _ = tables[None]
+
+        key = 'document_origin_planned_date'
+        if key not in tables:
+            query = cls._document_origin_planned_date_query()
+            join = table.join(
+                query, type_='LEFT',
+                condition=(query.move == table.id)
+            )
+            tables[key] = {
+                None: (join.right, join.condition),
+                }
+        else:
+            query, _ = tables[key][None]
+
+        return [Coalesce(query.delivery_date_store, query.delivery_date,
+            query.shipping_date, query.planned_date)]
