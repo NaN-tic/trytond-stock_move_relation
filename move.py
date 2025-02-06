@@ -47,9 +47,9 @@ class Move(metaclass=PoolMeta):
         Model = Pool().get('ir.model')
         models = cls._get_document_origin()
         models = Model.search([
-            ('model', 'in', models),
+            ('name', 'in', models),
             ])
-        return [(None, '')] + [(m.model, m.name) for m in models]
+        return [(None, '')] + [(m.name, m.string) for m in models]
 
     @classmethod
     def _get_document(cls):
@@ -68,9 +68,9 @@ class Move(metaclass=PoolMeta):
         Model = Pool().get('ir.model')
         models = cls._get_document()
         models = Model.search([
-            ('model', 'in', models),
+            ('name', 'in', models),
             ])
-        return [(None, '')] + [(m.model, m.name) for m in models]
+        return [(None, '')] + [(m.name, m.string) for m in models]
 
     @classmethod
     def get_relation(cls, moves, names):
