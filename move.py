@@ -74,6 +74,8 @@ class Move(metaclass=PoolMeta):
 
     @classmethod
     def get_relation(cls, moves, names):
+        Sale = Pool().get('sale.sale')
+
         res = {n: {m.id: None for m in moves} for n in names}
         for move in moves:
             document_origin = None
@@ -85,10 +87,12 @@ class Move(metaclass=PoolMeta):
                         and move.origin.purchase):
                     document_origin = move.origin.purchase
                 if (getattr(move, 'production_input', None)
-                        and move.production_input.origin):
+                        and move.production_input.origin
+                        and isinstance(move.production_input.origin, Sale)):
                     document_origin = move.production_input.origin.sale
                 if (getattr(move, 'production_output', None)
-                        and move.production_output.origin):
+                        and move.production_output.origin
+                        and isinstance(move.production_input.origin, Sale)):
                     document_origin = move.production_output.origin.sale
 
             if 'document_origin' in names and document_origin:
