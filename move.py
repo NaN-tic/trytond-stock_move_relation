@@ -92,7 +92,7 @@ class Move(metaclass=PoolMeta):
                     document_origin = move.production_input.origin.sale
                 if (getattr(move, 'production_output', None)
                         and move.production_output.origin
-                        and isinstance(move.production_input.origin, Sale)):
+                        and isinstance(move.production_output.origin, Sale)):
                     document_origin = move.production_output.origin.sale
 
             if 'document_origin' in names and document_origin:
