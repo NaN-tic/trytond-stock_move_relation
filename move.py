@@ -8,8 +8,6 @@ from trytond.model import fields
 from trytond.pool import Pool, PoolMeta
 from trytond.pyson import Eval
 
-__all__ = ['Move']
-
 
 class Move(metaclass=PoolMeta):
     __name__ = 'stock.move'
@@ -22,10 +20,12 @@ class Move(metaclass=PoolMeta):
     document_origin_planned_date = fields.Function(fields.Date(
         'Document Origin Planned Date'), 'get_relation',
         searcher='search_document_origin_planned_date')
-    from_warehouse = fields.Function(fields.Many2One('stock.location',
+    # from/to warehouse fields have end with an underscore to avoid
+    # colliding with the from_warehouse/to_warehouse properties
+    from_warehouse_ = fields.Function(fields.Many2One('stock.location',
         'From Warehouse', domain=[('type', '=', 'warehouse')]),
         'get_relation', searcher='search_from_warehouse')
-    to_warehouse = fields.Function(fields.Many2One('stock.location',
+    to_warehouse_ = fields.Function(fields.Many2One('stock.location',
         'To Warehouse', domain=[('type', '=', 'warehouse')]),
         'get_relation', searcher='search_to_warehouse')
     document_origin_party = fields.Function(
@@ -133,10 +133,10 @@ class Move(metaclass=PoolMeta):
                         planned_date = move.planned_date
                     res['document_origin_planned_date'][move.id] = planned_date
 
-            if 'from_warehouse' in names and move.from_location.warehouse:
-                res['from_warehouse'][move.id] = move.from_location.warehouse.id
-            if 'to_warehouse' in names and move.to_location.warehouse:
-                res['to_warehouse'][move.id] = move.to_location.warehouse.id
+            if 'from_warehouse_' in names and move.from_location.warehouse:
+                res['from_warehouse_'][move.id] = move.from_location.warehouse.id
+            if 'to_warehouse_' in names and move.to_location.warehouse:
+                res['to_warehouse_'][move.id] = move.to_location.warehouse.id
             if ('document_origin_party' in names
                     and document_origin
                     and document_origin.party):

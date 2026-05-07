@@ -15,6 +15,6 @@ this repository contains the full copyright notices and license terms. -->
     <field name="cost_price"/>
     <field name="state"/>
     <field name="effective_date"/>
-    <field name="from_warehouse"/>
+    <field name="from_warehouse_"/>
   <!-- <field name="production_output"/> -->
 </tree>
