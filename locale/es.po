@@ -22,11 +22,11 @@ msgctxt "field:stock.move,document_origin_planned_date:"
 msgid "Document Origin Planned Date"
 msgstr "Fecha planeada del documento origen"
 
-msgctxt "field:stock.move,from_warehouse:"
+msgctxt "field:stock.move,from_warehouse_:"
 msgid "From Warehouse"
 msgstr "Desde Almacén"
 
-msgctxt "field:stock.move,to_warehouse:"
+msgctxt "field:stock.move,to_warehouse_:"
 msgid "To Warehouse"
 msgstr "A Almacén"
 
