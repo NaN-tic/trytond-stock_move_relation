@@ -80,10 +80,11 @@ class Move(metaclass=PoolMeta):
         for move in moves:
             document_origin = None
             if move.origin and not isinstance(move.origin, str):
-                if (move.origin.__name__ == 'sale.line'
+                origin_model = getattr(move.origin, '__name__', None)
+                if (origin_model == 'sale.line'
                         and move.origin.sale):
                     document_origin = move.origin.sale
-                if (move.origin.__name__ == 'purchase.line'
+                if (origin_model == 'purchase.line'
                         and move.origin.purchase):
                     document_origin = move.origin.purchase
                 if (getattr(move, 'production_input', None)
@@ -108,21 +109,23 @@ class Move(metaclass=PoolMeta):
 
             if ('document_origin_date' in names and document_origin
                     and not isinstance(document_origin, str)):
+                document_origin_model = getattr(document_origin, '__name__', None)
                 res['document_origin_date'][move.id] = (
                     document_origin.sale_date
-                    if document_origin.__name__ == 'sale.sale'
+                    if document_origin_model == 'sale.sale'
                     else document_origin.purchase_date)
 
             if ('document_origin_planned_date' in names and move.origin
                     and not isinstance(move.origin, str)):
-                if move.origin.__name__ == 'sale.line':
+                origin_model = getattr(move.origin, '__name__', None)
+                if origin_model == 'sale.line':
                     delivery_date = getattr(move.origin,
                         'manual_delivery_date', None)
                     if not delivery_date:
                         delivery_date = getattr(move.origin,
                             'shipping_date', None)
                     res['document_origin_planned_date'][move.id] = delivery_date
-                elif move.origin.__name__ == 'purchase.line':
+                elif origin_model == 'purchase.line':
                     planned_date = None
                     if move.origin.delivery_date_store:
                         planned_date = move.origin.delivery_date_store
