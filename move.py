@@ -148,10 +148,10 @@ class Move(metaclass=PoolMeta):
 
     @classmethod
     def search_to_warehouse(cls, name, clause):
-        return [('to_location.warehouse',) + tuple(clause[1:])]
+        return [('to_location.warehouse_',) + tuple(clause[1:])]
     @classmethod
     def search_from_warehouse(cls, name, clause):
-        return [('from_location.warehouse',) + tuple(clause[1:])]
+        return [('from_location.warehouse_',) + tuple(clause[1:])]
 
     @classmethod
     def search_document_origin_party(cls, name, clause):
