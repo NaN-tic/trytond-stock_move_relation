@@ -1,0 +1,248 @@
+#
+msgid ""
+msgstr ""
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+msgctxt "field:stock.move,document:"
+msgid "Document"
+msgstr "文档"
+
+msgctxt "field:stock.move,document_origin:"
+msgid "Document Origin"
+msgstr "来源单据"
+
+msgctxt "field:stock.move,document_origin_date:"
+msgid "Document Origin Date"
+msgstr "来源单据日期"
+
+msgctxt "field:stock.move,document_origin_party:"
+msgid "Party"
+msgstr "参与者"
+
+msgctxt "field:stock.move,document_origin_planned_date:"
+msgid "Document Origin Planned Date"
+msgstr "来源单据计划日期"
+
+msgctxt "field:stock.move,from_warehouse_:"
+msgid "From Warehouse"
+msgstr "来源仓库"
+
+msgctxt "field:stock.move,to_warehouse_:"
+msgid "To Warehouse"
+msgstr "目标仓库"
+
+msgctxt "model:ir.action,name:act_move_in_form"
+msgid "Moves In"
+msgstr "入库移动"
+
+msgctxt "model:ir.action,name:act_move_out_form"
+msgid "Moves Out"
+msgstr "出库移动"
+
+msgctxt "model:ir.action,name:act_party_move_in_form2"
+msgid "Moves In"
+msgstr "入库移动"
+
+msgctxt "model:ir.action,name:act_party_move_out_form2"
+msgid "Moves Out"
+msgstr "出库移动"
+
+msgctxt "model:ir.action,name:act_product_move_in_form2"
+msgid "Moves In"
+msgstr "入库移动"
+
+msgctxt "model:ir.action,name:act_product_move_out_form2"
+msgid "Moves Out"
+msgstr "出库移动"
+
+msgctxt "model:ir.action,name:act_product_template_move_in_form2"
+msgid "Moves In"
+msgstr "入库移动"
+
+msgctxt "model:ir.action,name:act_product_template_move_out_form2"
+msgid "Moves Out"
+msgstr "出库移动"
+
+msgctxt "model:ir.action,name:act_purchase_move_in_form2"
+msgid "Moves In"
+msgstr "入库移动"
+
+msgctxt "model:ir.action,name:act_sale_move_out_form2"
+msgid "Moves Out"
+msgstr "出库移动"
+
+msgctxt "model:ir.action,name:act_stock_move_purchase_line"
+msgid "Moves In"
+msgstr "入库移动"
+
+msgctxt "model:ir.action,name:act_stock_move_sale_line"
+msgid "Moves Out"
+msgstr "出库移动"
+
+msgctxt "model:ir.action.act_window.domain,name:act_move_in_form_domain_all"
+msgid "All"
+msgstr "全部"
+
+msgctxt ""
+"model:ir.action.act_window.domain,name:act_move_in_form_domain_pending"
+msgid "Pending incoming"
+msgstr "待入库"
+
+msgctxt ""
+"model:ir.action.act_window.domain,name:act_move_in_form_domain_pending_overdue"
+msgid "Overdue pending incoming"
+msgstr "逾期待入库"
+
+msgctxt "model:ir.action.act_window.domain,name:act_move_out_form_domain_all"
+msgid "All"
+msgstr "全部"
+
+msgctxt ""
+"model:ir.action.act_window.domain,name:act_move_out_form_domain_pending"
+msgid "Pending Out"
+msgstr "待出库"
+
+msgctxt ""
+"model:ir.action.act_window.domain,name:act_move_out_form_domain_pending_overdue"
+msgid "Overdue pending out"
+msgstr "逾期待出库"
+
+msgctxt ""
+"model:ir.action.act_window.domain,name:act_party_move_in_form_domain_all"
+msgid "All"
+msgstr "全部"
+
+msgctxt ""
+"model:ir.action.act_window.domain,name:act_party_move_out_form_domain_pending"
+msgid "Pending out"
+msgstr "待出库"
+
+msgctxt "model:ir.ui.menu,name:menu_move_in_form"
+msgid "Moves In"
+msgstr "入库移动"
+
+msgctxt "model:ir.ui.menu,name:menu_move_out_form"
+msgid "Moves Out"
+msgstr "出库移动"
+
+msgctxt "field:stock.move,from_warehouse:"
+msgid "From Warehouse"
+msgstr "来源仓库"
+
+msgctxt "field:stock.move,to_warehouse:"
+msgid "To Warehouse"
+msgstr "目标仓库"
+
+msgctxt ""
+"model:ir.action.act_window.domain,name:act_product_move_out_form_domain_pending_overdue"
+msgid "Overdue pending out"
+msgstr "逾期待出库"
+
+msgctxt ""
+"model:ir.action.act_window.domain,name:act_product_move_out_form_domain_pending"
+msgid "Pending out"
+msgstr "待出库"
+
+msgctxt ""
+"model:ir.action.act_window.domain,name:act_product_move_out_form_domain_all"
+msgid "All"
+msgstr "全部"
+
+msgctxt ""
+"model:ir.action.act_window.domain,name:act_product_template_move_out_form_domain_pending_overdue"
+msgid "Overdue pending out"
+msgstr "逾期待出库"
+
+msgctxt ""
+"model:ir.action.act_window.domain,name:act_product_template_move_out_form_domain_pending"
+msgid "Pending out"
+msgstr "待出库"
+
+msgctxt ""
+"model:ir.action.act_window.domain,name:act_product_template_move_out_form_domain_all"
+msgid "All"
+msgstr "全部"
+
+msgctxt ""
+"model:ir.action.act_window.domain,name:act_product_move_in_form_domain_pending_overdue"
+msgid "Overdue pending incoming"
+msgstr "逾期待入库"
+
+msgctxt ""
+"model:ir.action.act_window.domain,name:act_product_move_in_form_domain_pending"
+msgid "Pending incoming"
+msgstr "待入库"
+
+msgctxt ""
+"model:ir.action.act_window.domain,name:act_product_move_in_form_domain_all"
+msgid "All"
+msgstr "全部"
+
+msgctxt ""
+"model:ir.action.act_window.domain,name:act_product_template_move_in_form_domain_pending_overdue"
+msgid "Overdue pending incoming"
+msgstr "逾期待入库"
+
+msgctxt ""
+"model:ir.action.act_window.domain,name:act_product_template_move_in_form_domain_pending"
+msgid "Pending incoming"
+msgstr "待入库"
+
+msgctxt ""
+"model:ir.action.act_window.domain,name:act_product_template_move_in_form_domain_all"
+msgid "All"
+msgstr "全部"
+
+msgctxt ""
+"model:ir.action.act_window.domain,name:act_party_move_out_form_domain_pending_overdue"
+msgid "Overdue pending out"
+msgstr "逾期待出库"
+
+msgctxt ""
+"model:ir.action.act_window.domain,name:act_party_move_out_form_domain_all"
+msgid "All"
+msgstr "全部"
+
+msgctxt ""
+"model:ir.action.act_window.domain,name:act_party_move_in_form_domain_pending_overdue"
+msgid "Overdue pending incoming"
+msgstr "逾期待入库"
+
+msgctxt ""
+"model:ir.action.act_window.domain,name:act_party_move_in_form_domain_pending"
+msgid "Pending incoming"
+msgstr "待入库"
+
+msgctxt ""
+"model:ir.action.act_window.domain,name:act_purchase_move_in_form_domain_pending_overdue"
+msgid "Overdue pending incoming"
+msgstr "逾期待入库"
+
+msgctxt ""
+"model:ir.action.act_window.domain,name:act_purchase_move_in_form_domain_pending"
+msgid "Pending incoming"
+msgstr "待入库"
+
+msgctxt ""
+"model:ir.action.act_window.domain,name:act_purchase_move_in_form_domain_all"
+msgid "All"
+msgstr "全部"
+
+msgctxt ""
+"model:ir.action.act_window.domain,name:act_sale_move_out_form_domain_pending_overdue"
+msgid "Overdue pending out"
+msgstr "逾期待出库"
+
+msgctxt ""
+"model:ir.action.act_window.domain,name:act_sale_move_out_form_domain_pending"
+msgid "Pending out"
+msgstr "待出库"
+
+msgctxt ""
+"model:ir.action.act_window.domain,name:act_sale_move_out_form_domain_all"
+msgid "All"
+msgstr "全部"
