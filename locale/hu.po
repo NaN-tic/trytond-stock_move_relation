@@ -1,0 +1,248 @@
+#
+msgid ""
+msgstr ""
+"Language: hu\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+msgctxt "field:stock.move,document:"
+msgid "Document"
+msgstr "Dokumentum"
+
+msgctxt "field:stock.move,document_origin:"
+msgid "Document Origin"
+msgstr "Forrásdokumentum"
+
+msgctxt "field:stock.move,document_origin_date:"
+msgid "Document Origin Date"
+msgstr "Forrásdokumentum dátuma"
+
+msgctxt "field:stock.move,document_origin_party:"
+msgid "Party"
+msgstr "Ügyfél"
+
+msgctxt "field:stock.move,document_origin_planned_date:"
+msgid "Document Origin Planned Date"
+msgstr "Forrásdokumentum tervezett dátuma"
+
+msgctxt "field:stock.move,from_warehouse_:"
+msgid "From Warehouse"
+msgstr "Kiinduló raktár"
+
+msgctxt "field:stock.move,to_warehouse_:"
+msgid "To Warehouse"
+msgstr "Célraktár"
+
+msgctxt "model:ir.action,name:act_move_in_form"
+msgid "Moves In"
+msgstr "Bejövő készletmozgások"
+
+msgctxt "model:ir.action,name:act_move_out_form"
+msgid "Moves Out"
+msgstr "Kimenő készletmozgások"
+
+msgctxt "model:ir.action,name:act_party_move_in_form2"
+msgid "Moves In"
+msgstr "Bejövő készletmozgások"
+
+msgctxt "model:ir.action,name:act_party_move_out_form2"
+msgid "Moves Out"
+msgstr "Kimenő készletmozgások"
+
+msgctxt "model:ir.action,name:act_product_move_in_form2"
+msgid "Moves In"
+msgstr "Bejövő készletmozgások"
+
+msgctxt "model:ir.action,name:act_product_move_out_form2"
+msgid "Moves Out"
+msgstr "Kimenő készletmozgások"
+
+msgctxt "model:ir.action,name:act_product_template_move_in_form2"
+msgid "Moves In"
+msgstr "Bejövő készletmozgások"
+
+msgctxt "model:ir.action,name:act_product_template_move_out_form2"
+msgid "Moves Out"
+msgstr "Kimenő készletmozgások"
+
+msgctxt "model:ir.action,name:act_purchase_move_in_form2"
+msgid "Moves In"
+msgstr "Bejövő készletmozgások"
+
+msgctxt "model:ir.action,name:act_sale_move_out_form2"
+msgid "Moves Out"
+msgstr "Kimenő készletmozgások"
+
+msgctxt "model:ir.action,name:act_stock_move_purchase_line"
+msgid "Moves In"
+msgstr "Bejövő készletmozgások"
+
+msgctxt "model:ir.action,name:act_stock_move_sale_line"
+msgid "Moves Out"
+msgstr "Kimenő készletmozgások"
+
+msgctxt "model:ir.action.act_window.domain,name:act_move_in_form_domain_all"
+msgid "All"
+msgstr "összes"
+
+msgctxt ""
+"model:ir.action.act_window.domain,name:act_move_in_form_domain_pending"
+msgid "Pending incoming"
+msgstr "Függőben lévő beérkezés"
+
+msgctxt ""
+"model:ir.action.act_window.domain,name:act_move_in_form_domain_pending_overdue"
+msgid "Overdue pending incoming"
+msgstr "Lejárt függő beérkezés"
+
+msgctxt "model:ir.action.act_window.domain,name:act_move_out_form_domain_all"
+msgid "All"
+msgstr "összes"
+
+msgctxt ""
+"model:ir.action.act_window.domain,name:act_move_out_form_domain_pending"
+msgid "Pending Out"
+msgstr "Függőben lévő kiadás"
+
+msgctxt ""
+"model:ir.action.act_window.domain,name:act_move_out_form_domain_pending_overdue"
+msgid "Overdue pending out"
+msgstr "Lejárt függő kiadás"
+
+msgctxt ""
+"model:ir.action.act_window.domain,name:act_party_move_in_form_domain_all"
+msgid "All"
+msgstr "összes"
+
+msgctxt ""
+"model:ir.action.act_window.domain,name:act_party_move_out_form_domain_pending"
+msgid "Pending out"
+msgstr "Függőben lévő kiadás"
+
+msgctxt "model:ir.ui.menu,name:menu_move_in_form"
+msgid "Moves In"
+msgstr "Bejövő készletmozgások"
+
+msgctxt "model:ir.ui.menu,name:menu_move_out_form"
+msgid "Moves Out"
+msgstr "Kimenő készletmozgások"
+
+msgctxt "field:stock.move,from_warehouse:"
+msgid "From Warehouse"
+msgstr "Kiinduló raktár"
+
+msgctxt "field:stock.move,to_warehouse:"
+msgid "To Warehouse"
+msgstr "Célraktár"
+
+msgctxt ""
+"model:ir.action.act_window.domain,name:act_product_move_out_form_domain_pending_overdue"
+msgid "Overdue pending out"
+msgstr "Lejárt függő kiadás"
+
+msgctxt ""
+"model:ir.action.act_window.domain,name:act_product_move_out_form_domain_pending"
+msgid "Pending out"
+msgstr "Függőben lévő kiadás"
+
+msgctxt ""
+"model:ir.action.act_window.domain,name:act_product_move_out_form_domain_all"
+msgid "All"
+msgstr "összes"
+
+msgctxt ""
+"model:ir.action.act_window.domain,name:act_product_template_move_out_form_domain_pending_overdue"
+msgid "Overdue pending out"
+msgstr "Lejárt függő kiadás"
+
+msgctxt ""
+"model:ir.action.act_window.domain,name:act_product_template_move_out_form_domain_pending"
+msgid "Pending out"
+msgstr "Függőben lévő kiadás"
+
+msgctxt ""
+"model:ir.action.act_window.domain,name:act_product_template_move_out_form_domain_all"
+msgid "All"
+msgstr "összes"
+
+msgctxt ""
+"model:ir.action.act_window.domain,name:act_product_move_in_form_domain_pending_overdue"
+msgid "Overdue pending incoming"
+msgstr "Lejárt függő beérkezés"
+
+msgctxt ""
+"model:ir.action.act_window.domain,name:act_product_move_in_form_domain_pending"
+msgid "Pending incoming"
+msgstr "Függőben lévő beérkezés"
+
+msgctxt ""
+"model:ir.action.act_window.domain,name:act_product_move_in_form_domain_all"
+msgid "All"
+msgstr "összes"
+
+msgctxt ""
+"model:ir.action.act_window.domain,name:act_product_template_move_in_form_domain_pending_overdue"
+msgid "Overdue pending incoming"
+msgstr "Lejárt függő beérkezés"
+
+msgctxt ""
+"model:ir.action.act_window.domain,name:act_product_template_move_in_form_domain_pending"
+msgid "Pending incoming"
+msgstr "Függőben lévő beérkezés"
+
+msgctxt ""
+"model:ir.action.act_window.domain,name:act_product_template_move_in_form_domain_all"
+msgid "All"
+msgstr "összes"
+
+msgctxt ""
+"model:ir.action.act_window.domain,name:act_party_move_out_form_domain_pending_overdue"
+msgid "Overdue pending out"
+msgstr "Lejárt függő kiadás"
+
+msgctxt ""
+"model:ir.action.act_window.domain,name:act_party_move_out_form_domain_all"
+msgid "All"
+msgstr "összes"
+
+msgctxt ""
+"model:ir.action.act_window.domain,name:act_party_move_in_form_domain_pending_overdue"
+msgid "Overdue pending incoming"
+msgstr "Lejárt függő beérkezés"
+
+msgctxt ""
+"model:ir.action.act_window.domain,name:act_party_move_in_form_domain_pending"
+msgid "Pending incoming"
+msgstr "Függőben lévő beérkezés"
+
+msgctxt ""
+"model:ir.action.act_window.domain,name:act_purchase_move_in_form_domain_pending_overdue"
+msgid "Overdue pending incoming"
+msgstr "Lejárt függő beérkezés"
+
+msgctxt ""
+"model:ir.action.act_window.domain,name:act_purchase_move_in_form_domain_pending"
+msgid "Pending incoming"
+msgstr "Függőben lévő beérkezés"
+
+msgctxt ""
+"model:ir.action.act_window.domain,name:act_purchase_move_in_form_domain_all"
+msgid "All"
+msgstr "összes"
+
+msgctxt ""
+"model:ir.action.act_window.domain,name:act_sale_move_out_form_domain_pending_overdue"
+msgid "Overdue pending out"
+msgstr "Lejárt függő kiadás"
+
+msgctxt ""
+"model:ir.action.act_window.domain,name:act_sale_move_out_form_domain_pending"
+msgid "Pending out"
+msgstr "Függőben lévő kiadás"
+
+msgctxt ""
+"model:ir.action.act_window.domain,name:act_sale_move_out_form_domain_all"
+msgid "All"
+msgstr "összes"
